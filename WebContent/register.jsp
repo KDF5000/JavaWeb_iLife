@@ -11,7 +11,7 @@
 		User aUser = new User();
 		aUser.setUserName(name);
 		aUser.setPassword(password);
-		aUser.seteMail(eMail);
+		aUser.setMail(eMail);
 		boolean res= UserDao.getInstance().saveUser(aUser);
 		if(res)
 		{
