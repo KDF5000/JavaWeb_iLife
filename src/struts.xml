@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+ 
+<struts>
+	<!-- 声明包 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <package name="myPackage" extends="struts-default" namespace="/">
+    	<!-- 定义action -->
+    	<action name="first" >
+    	    <!-- 定义处理成功后的返回界面 -->
+    	    <result>first.jsp</result>
+    	</action>
+    	<action name="saveUser" class="com.test.action.UserDomainAction">
+    	    <result name="success">/OK.jsp</result>
+    	    <result name="error">/error.jsp</result>
+    	    <result name="exist">/exist.jsp</result>
+    	</action>
+    </package>
+</struts>
