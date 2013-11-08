@@ -6,16 +6,23 @@
 <struts>
 	<!-- 声明包 -->
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true"></constant>
+	
     <package name="myPackage" extends="struts-default" namespace="/">
     	<!-- 定义action -->
     	<action name="first" >
     	    <!-- 定义处理成功后的返回界面 -->
     	    <result>first.jsp</result>
     	</action>
+    	<!-- 保存用户到数据库 -->
     	<action name="saveUser" class="com.test.action.UserDomainAction">
     	    <result name="success">/OK.jsp</result>
     	    <result name="error">/error.jsp</result>
     	    <result name="exist">/exist.jsp</result>
+    	</action>
+    	<!-- 测试 OGNL -->
+    	<action name="OGNLAction" class="com.demo.ognl.OGNLAction">
+    	    <result>ognlSuccess.jsp</result>
     	</action>
     </package>
 </struts>
