@@ -6,7 +6,10 @@
 <struts>
 	<!-- 声明包 -->
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 开发模式 -->
 	<constant name="struts.devMode" value="true"></constant>
+	<!-- 自动加载 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
 	
     <package name="myPackage" extends="struts-default" namespace="/">
     	<!-- 定义action -->
@@ -23,6 +26,17 @@
     	<!-- 测试 OGNL -->
     	<action name="OGNLAction" class="com.demo.ognl.OGNLAction">
     	    <result>ognlSuccess.jsp</result>
+    	</action>
+    	<!-- 测试拦截器 -->
+    	<action name="interceptorAction" class="com.demo.interceptor.interceptorAction"> 
+    	    <!-- 配置拦截器 -->
+    	    <interceptor-ref name="timer"></interceptor-ref>
+    	    <result>interceptorSuccess.jsp</result>
+    	</action>
+    	<!-- 测试数据验证 -->
+    	<action name="validatorAction" class="com.test.action.validatorAction">
+    	    <result name="input">validatorLogin.jsp</result>
+    	    <result name="success">OK.jsp</result>
     	</action>
     </package>
 </struts>
