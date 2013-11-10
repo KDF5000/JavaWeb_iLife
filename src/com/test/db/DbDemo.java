@@ -10,7 +10,7 @@ public class DbDemo {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//添加用户
 //		User aUser = new User();
@@ -90,7 +90,7 @@ public class DbDemo {
 			System.out.println("密码："+aUser1.getPassword());
 			System.out.println("邮箱："+aUser1.getMail());
 		}
-	}
+	}*/
 	//连接sql server 2008数据库
 	public static Connection getSqlServerCon()
 	{

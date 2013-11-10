@@ -6,6 +6,12 @@ public class User {
 	private String password;  //用户密码
 	private String mail;     //用户邮箱
 	
+	//hibernate规定要作为持久化类必须实现一个默认的构造方法
+	public User()
+	{
+		
+	}
+	
 	public String getUserName() {
 		return userName;
 	}

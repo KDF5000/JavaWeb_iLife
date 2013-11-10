@@ -8,10 +8,10 @@
 <title>验证登陆</title>
 </head>
 <body>
-<s:form action="validatorAction" >
+<s:form action="validatorAction" method="post" namespace="/myPackage"  >
 	<s:textfield name="username" label="用户名" required="true" requiredposition="right"></s:textfield>
     <s:textfield name="password" label="密码" required="true" requiredposition="right" ></s:textfield>
-    <s:submit key="submit" value="登录"></s:submit>
+    <s:submit value="登录"></s:submit>
 </s:form>
 </body>
 </html>
